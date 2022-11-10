@@ -16,7 +16,6 @@ func init() {
 	rand.Seed(time.Now().UnixNano())
 }
 
-// main 是所有 Go 程序的入口
 func TestChan() {
 	// 创建一个无缓冲的通道
 	court := make(chan int)

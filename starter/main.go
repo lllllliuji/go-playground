@@ -26,4 +26,5 @@ func main() {
 	dict["hello"] = 2
 	TestType()
 	TestChan()
+	TestBuffedChan()
 }
