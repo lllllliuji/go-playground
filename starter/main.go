@@ -10,7 +10,7 @@ func init() {
 }
 
 func main() {
-	str := "world"
+	str := "world" + "ppppp"
 	fmt.Println("hello", str)
 	fmt.Println(mymath.Sqrt(100.0))
 	fmt.Println(mymath.Mygcd(10, 5))
@@ -24,7 +24,6 @@ func main() {
 	}
 	dict := make(map[string]int)
 	dict["hello"] = 2
-	TestType()
-	TestChan()
-	TestBuffedChan()
+	dict["good"] = 3
+	fmt.Println(len(dict))
 }
