@@ -3,26 +3,30 @@ package myfile
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"math/rand"
 	"os"
 	"strconv"
 )
+
 type KeyValue struct {
-	X string 
+	X string
 	Y string
 }
+
 func FileTest() {
-	filename := "myfiletest"
-	ofile, _ := os.Create(filename)
-	enc := json.NewEncoder(ofile)
-	for i := 0; i < 10; i ++ {
-		kv := KeyValue {
+	tmpfile, _ := ioutil.TempFile("", "tmpfile")
+	enc := json.NewEncoder(tmpfile)
+	for i := 0; i < 10; i++ {
+		kv := KeyValue{
 			X: strconv.Itoa(rand.Int()),
 			Y: strconv.Itoa(rand.Int()),
 		}
 		enc.Encode(&kv)
 	}
-	ofile.Close()
+	tmpfile.Close()
+	filename := "myfiletest"
+	os.Rename(tmpfile.Name(), "./"+filename)
 	infile, _ := os.Open(filename)
 	dec := json.NewDecoder(infile)
 	for {
