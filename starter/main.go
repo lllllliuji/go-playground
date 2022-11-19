@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
-	myconcurrency.Condition_test()
+	myconcurrency.ConditionTest()
+	myconcurrency.WaitGroupTest()
 }

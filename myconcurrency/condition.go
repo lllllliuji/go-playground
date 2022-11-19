@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-func Condition_test() {
+func ConditionTest() {
 	var mut sync.Mutex
 	cond := sync.NewCond(&mut)
 	count := 0
