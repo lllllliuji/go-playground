@@ -3,7 +3,7 @@ package myfile
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	// "io/ioutil"
 	"math/rand"
 	"os"
 	"strconv"
@@ -15,7 +15,8 @@ type KeyValue struct {
 }
 
 func FileTest() {
-	tmpfile, _ := ioutil.TempFile("", "tmpfile")
+	tmpfile, _ := os.CreateTemp("", "tmpfile")
+	// tmpfile, _ := ioutil.TempFile("", "tmpfile")
 	enc := json.NewEncoder(tmpfile)
 	for i := 0; i < 10; i++ {
 		kv := KeyValue{
