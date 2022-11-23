@@ -1,0 +1,5 @@
+package mybasic
+
+func TestSlice() {
+	
+}

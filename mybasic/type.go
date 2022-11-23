@@ -1,4 +1,4 @@
-package mytype
+package mybasic
 
 import "fmt"
 
