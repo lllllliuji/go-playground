@@ -1,6 +1,6 @@
 // 这个示例程序展示如何用无缓冲的通道来模拟
 // 2 个 goroutine 间的网球比赛
-package main
+package myconcurrency
 
 import (
 	"fmt"

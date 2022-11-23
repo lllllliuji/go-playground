@@ -1,7 +1,7 @@
 // 这个示例程序展示如何使用
 // 有缓冲的通道和固定数目的
 // goroutine 来处理一堆工作
-package main
+package myconcurrency
 
 import (
 	"fmt"
