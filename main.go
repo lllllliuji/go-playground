@@ -1,24 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"time"
-	"zzzz/myrpc"
+	// "zzzz/mybasic"
+	"zzzz/myconcurrency"
 )
-func doSomething() {
-	go func() {
-		cnt := 0
-		for {
-			cnt ++
-			fmt.Println(cnt)
-			time.Sleep(time.Second)
-		}
-	}()
-}
-func main() {
-	go myrpc.RpcServer()
-	go myrpc.RpcClient()
 
-	ch := make(chan int)
-	ch <- 10
+func main() {
+	myconcurrency.ConditionTest()
 }
