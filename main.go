@@ -1,7 +1,9 @@
 package main
 
 import (
-	"zzzz/mybasic"
+	"fmt"
+	"time"
+	"zzzz/mytime"
 )
 
 func min(a, b int) int {
@@ -10,7 +12,12 @@ func min(a, b int) int {
 	}
 	return a
 }
-
+func Period(ch chan<- int) {
+	for {
+		fmt.Println("work")
+		time.Sleep(3 * time.Second)
+	}
+}
 func main() {
-	mybasic.TestStrconv()
+	mytime.TestSelect()
 }
